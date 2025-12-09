@@ -23,13 +23,12 @@ requirements:
   run:
     - python >=${{ python_min }}
     - numpy
-    - scipy >=1.14.1
+    - scipy >=1.16.3
     - matplotlib-base
     - mpmath
-    - filterpy
+    - bayesian-filters
     - pyshtools
     - beartype
-    - quaternion
     - shapely
 
 tests:
