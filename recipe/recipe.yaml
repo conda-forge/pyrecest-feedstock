@@ -1,6 +1,7 @@
 context:
   name: pyrecest
-  version: "0.9.1"
+  version: "1.0.0"
+  python_min: 3.11
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +9,7 @@ package:
 
 source:
   url: https://github.com/FlorianPfaff/pyrecest/archive/refs/tags/${{ version }}.tar.gz
-  sha256: d345006340f25d1d545d4c4839080657efe0ac3c89b1ea9915daa84e9b0dc654
+  sha256: 1f8d512f2dd34e55a2b4bf2f3e75207c67fbf2a3f586712dfcafa539ca65a258
 
 build:
   noarch: python
@@ -23,13 +24,12 @@ requirements:
   run:
     - python >=${{ python_min }}
     - numpy
-    - scipy >=1.14.1
+    - scipy >=1.16.3
     - matplotlib-base
     - mpmath
-    - filterpy
+    - bayesian-filters
     - pyshtools
     - beartype
-    - quaternion
     - shapely
 
 tests:
