@@ -1,6 +1,7 @@
 context:
   name: pyrecest
   version: "1.0.0"
+  python_min: 3.11
 
 package:
   name: ${{ name|lower }}
