@@ -1,6 +1,6 @@
 context:
   name: pyrecest
-  version: "2.0.0"
+  version: "2.1.0"
   python_min: "3.11"
 
 package:
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://github.com/FlorianPfaff/pyrecest/archive/refs/tags/${{ version }}.tar.gz
-  sha256: db1f5cf6f96187d989c68c6c5b77304b0136a6ce75201e22cef6b25277485c4e
+  sha256: c7c93edfd64a228e3d1f626f6b43f7b4e346d1cbdeb46b625781ff67ab0da5d8
 
 build:
   noarch: python
