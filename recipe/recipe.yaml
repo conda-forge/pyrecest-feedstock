@@ -20,17 +20,16 @@ requirements:
   host:
     - python ${{ python_min }}.*
     - pip
-    - poetry-core
+    - poetry-core >=2.0.0, <3.0.0
   run:
     - python >=${{ python_min }}
-    - numpy
-    - scipy >=1.16.3
-    - matplotlib-base
-    - mpmath
-    - bayesian-filters
-    - pyshtools
-    - beartype
-    - shapely
+    - numpy >=2.0, <2.5
+    - scipy >=1.14, <1.18
+    - matplotlib-base >=3.8, <4.0
+    - mpmath >=1.3, <1.4
+    - pyshtools >=4.12,<5.0
+    - beartype >=0.18,<0.23
+    - shapely >=2.0,<3.0
 
 tests:
   - python:
