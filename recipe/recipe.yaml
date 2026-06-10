@@ -1,6 +1,6 @@
 context:
   name: pyrecest
-  version: "2.2.2"
+  version: "2.2.3"
   python_min: "3.11"
 
 package:
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://github.com/FlorianPfaff/pyrecest/archive/refs/tags/${{ version }}.tar.gz
-  sha256: 79c74563ca6de639856be3d863b3747ce1bac75ee894d6e38f21805730f3ea3c
+  sha256: b770683e8aaa5cc9883b140424d37dd94dfffb94f98957a1d12e42120191ee28
 
 build:
   noarch: python
@@ -20,17 +20,16 @@ requirements:
   host:
     - python ${{ python_min }}.*
     - pip
-    - poetry-core
+    - poetry-core >=2.0.0, <3.0.0
   run:
     - python >=${{ python_min }}
-    - numpy
-    - scipy >=1.16.3
-    - matplotlib-base
-    - mpmath
-    - bayesian-filters
-    - pyshtools
-    - beartype
-    - shapely
+    - numpy >=2.0, <2.5
+    - scipy >=1.14, <1.18
+    - matplotlib-base >=3.8, <4.0
+    - mpmath >=1.3, <1.4
+    - pyshtools >=4.12,<5.0
+    - beartype >=0.18,<0.23
+    - shapely >=2.0,<3.0
 
 tests:
   - python:
